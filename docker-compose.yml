@@ -1,0 +1,15 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - MOD_KEY=${MOD_KEY:-velvet-mod-2026}
+      - DB_FILE=/data/velvet.db
+    volumes:
+      - velvet-data:/data
+    restart: unless-stopped
+
+volumes:
+  velvet-data:

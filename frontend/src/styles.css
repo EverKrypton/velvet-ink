@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --color-ink: #0c0910;
+  --color-surface: #171021;
+  --color-velvet: #ff4d6d;
+  --color-gold: #e8c476;
+}
+
+html, body {
+  background: #0c0910;
+  color: #f5ede4;
+  font-family: var(--font-body);
+  -webkit-tap-highlight-color: transparent;
+}
+.font-display { font-family: var(--font-display); }
+
+.velvet-bg {
+  background:
+    radial-gradient(600px 300px at 20% -5%, rgba(255,77,109,.18), transparent 60%),
+    radial-gradient(500px 280px at 90% 10%, rgba(232,196,118,.10), transparent 60%),
+    radial-gradient(700px 500px at 50% 110%, rgba(127,29,58,.25), transparent 65%),
+    #0c0910;
+}
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.09);
+  backdrop-filter: blur(8px);
+}
+.blur-nsfw { filter: blur(14px); user-select: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+textarea, input, select { outline: none; }
+textarea:focus, input:focus { border-color: rgba(255,77,109,.6) !important; }
